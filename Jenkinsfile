@@ -8,7 +8,7 @@ node {
         }
         stage ('connect to server') {
             sh "echo 'shell scripts to build project...'"
-	    sh '''ssh -t santosh@production-box 
+	    sh '''sshpass -p Oms@1ram@123 ssh 10.232.145.133 
 	    cd /tmp  
 	    touch pipe1 pipe2 '''
         }
