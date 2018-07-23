@@ -14,7 +14,7 @@ node {
                 sh "echo 'shell scripts to run static tests...'"
             },
             'unit': {
-                sh "echo 'shell scripts to run unit tests...'"
+                sh "echo 'shell 2 scripts to run unit tests...'"
             },
             'integration': {
                 sh "echo 'shell scripts to run integration tests...'"
