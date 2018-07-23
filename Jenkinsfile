@@ -3,13 +3,16 @@ node {
     deleteDir()
 
     try {
-        stage ('Clone') {
+        stage ('Code cloning') {
             checkout scm
         }
-        stage ('Build') {
+        stage ('connect to server') {
             sh "echo 'shell scripts to build project...'"
+	    sh '''ssh -t santosh@production-box 
+	    cd /tmp  
+	    touch pipe1 pipe2 '''
         }
-        stage ('Tests') {
+        stage (' Build ') {
             parallel 'static': {
                 sh "echo 'shell scripts to run static tests...'"
             },
