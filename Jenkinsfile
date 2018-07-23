@@ -21,7 +21,7 @@ node {
             }
         }
         stage ('Deploy') {
-            sh "echo 'shell scripts to deploy to server...'"
+            sh "echo 'shell 1 scripts to deploy to server...'"
         }
     } catch (err) {
         currentBuild.result = 'FAILED'
