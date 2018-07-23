@@ -8,16 +8,17 @@ node {
         }
         stage ('connect to server') {
             sh "echo 'shell scripts to build project...'"
-	    sh '''sshpass -p Oms@1ram@123 ssh santosh@10.232.145.133 
-	    cd /tmp  
-	    touch pipe1 pipe2 '''
+	    sh '''sshpass -p Oms@1ram@123 ssh santosh@10.232.145.133'''
+
+	    
         }
         stage (' Build ') {
             parallel 'static': {
                 sh "echo 'shell scripts to run static tests...'"
+		sh ''' touch /tmp/pipe1 '''
             },
             'unit': {
-                sh "echo 'shell 2 scripts to run unit tests...'"
+                sh "echo 'shell 2 scripts to run unit tests >> /tmp/pipe1'"
             },
             'integration': {
                 sh "echo 'shell scripts to run integration tests...'"
