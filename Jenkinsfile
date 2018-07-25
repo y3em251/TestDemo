@@ -17,7 +17,6 @@ node {
                 sh "echo 'shell scripts to run static tests...'"
 		
 		}
-
             },
             'unit': {
                 sh "echo 'shell 2 scripts to run unit tests >> /tmp/pipe1'"
