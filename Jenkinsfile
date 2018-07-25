@@ -15,10 +15,7 @@ node {
         stage (' Build ') {
             parallel 'static': {
                 sh "echo 'shell scripts to run static tests...'"
-		steps {
-		sh '''touch file1 file 2
-			echo "hi this is awsome job" >>  file1 '''
-		sh ''' touch /tmp/pipe1 '''
+		
 		}
 
             },
